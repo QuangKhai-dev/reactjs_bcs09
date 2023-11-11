@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import ContentComponent from './components/BaiTap/ContentComponent';
+import FooterComponent from './components/BaiTap/FooterComponent';
+import HeaderComponent from './components/BaiTap/HeaderComponent';
+import HomeComponent from './components/BaiTap/HomeComponent';
+import NavigationComponent from './components/BaiTap/NavigationComponent';
+import BaiTapBinding from './components/BaiTapBindingDuLieu/BaiTapBinding';
+import DemoEvent from './components/DemoEvent/DemoEvent';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Header />
+      <Header />
+      <Footer /> */}
+      <HomeComponent />
+      <HeaderComponent />
+      <div className="row">
+        <NavigationComponent />
+        <ContentComponent />
+      </div>
+      <FooterComponent />
+      <BaiTapBinding />
+      <DemoEvent />
     </div>
   );
 }
