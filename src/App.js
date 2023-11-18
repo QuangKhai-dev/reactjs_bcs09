@@ -7,6 +7,7 @@ import BaiTapBinding from './components/BaiTapBindingDuLieu/BaiTapBinding';
 import DemoCss from './components/DemoCss/DemoCss';
 
 import DemoEvent from './components/DemoEvent/DemoEvent';
+import DemoForm from './components/DemoForm/DemoForm';
 import BaiTapProps1 from './components/DemoProps/BaiTapProps1/BaiTapProps1';
 import BaiTapProps2 from './components/DemoProps/BaiTapProps2/BaiTapProps2';
 import DemoProps from './components/DemoProps/DemoProps';
@@ -35,9 +36,10 @@ function App() {
       <DemoState /> */}
       {/* <BaiTap1 />
       <BaiTap2 /> */}
-      <DemoProps />
+      {/* <DemoProps />
       <BaiTapProps1 />
-      <BaiTapProps2 />
+      <BaiTapProps2 /> */}
+      <DemoForm />
     </div>
   );
 }
