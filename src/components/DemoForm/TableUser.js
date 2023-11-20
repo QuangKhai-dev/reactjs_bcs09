@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class TableUser extends Component {
   render() {
-    const { arrNguoiDung, handleDelete } = this.props;
+    const { arrNguoiDung, handleDelete, getValueUser } = this.props;
     return (
       <div>
         <div className="relative overflow-x-auto">
@@ -56,7 +56,11 @@ export default class TableUser extends Component {
                     <td className="px-6 py-4">{chucVu}</td>
                     <td className="px-6 py-4">{gioiTinh}</td>
                     <td className="px-6 py-4 space-x-5">
-                      <button>
+                      <button
+                        onClick={() => {
+                          getValueUser(item);
+                        }}
+                      >
                         <ion-icon
                           color="warning"
                           size="large"

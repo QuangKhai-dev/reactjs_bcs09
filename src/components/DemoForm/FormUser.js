@@ -5,10 +5,11 @@ export default class FormUser extends Component {
   render() {
     // console.log(this.props);
     // destructuring
-    const { errors, values, handleOnChange, handleSubmit } = this.props;
+    const { errors, values, handleOnChange, handleSubmit, handleUpdateValue } =
+      this.props;
     return (
       <div>
-        <form onSubmit={handleSubmit}>
+        <form id="form_user" onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-2">
             <div className="w-full px-3 mb-6 md:mb-0">
               <label
@@ -43,13 +44,18 @@ export default class FormUser extends Component {
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="hoTen"
+                data-validation="string"
                 type="text"
                 placeholder="Vui lòng nhập họ tên"
                 value={values.hoTen}
                 onChange={(event) => {
                   // event
                   const { value, id } = event.target;
-                  handleOnChange(value, id);
+                  // gọi data attribute của phần tử html
+                  let valueAttribute =
+                    event.target.getAttribute('data-validation');
+                  console.log(valueAttribute);
+                  handleOnChange(value, id, valueAttribute);
                 }}
               />
               <p className="text-red-500 text-xs italic">{errors.hoTen}</p>
@@ -176,7 +182,11 @@ export default class FormUser extends Component {
             >
               Thêm người dùng
             </button>
-            <button className="py-2 px-5 rounded-md bg-yellow-500 text-black ml-4">
+            <button
+              type="button"
+              onClick={handleUpdateValue}
+              className="py-2 px-5 rounded-md bg-yellow-500 text-black ml-4"
+            >
               Cập nhật người dùng
             </button>
           </div>
