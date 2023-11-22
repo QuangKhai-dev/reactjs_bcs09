@@ -11,6 +11,7 @@ import DemoForm from './components/DemoForm/DemoForm';
 import BaiTapProps1 from './components/DemoProps/BaiTapProps1/BaiTapProps1';
 import BaiTapProps2 from './components/DemoProps/BaiTapProps2/BaiTapProps2';
 import DemoProps from './components/DemoProps/DemoProps';
+import DemoRedux from './components/DemoRedux/DemoRedux';
 import BaiTap1 from './components/DemoState/BaiTap1';
 import BaiTap2 from './components/DemoState/BaiTap2';
 import DemoState from './components/DemoState/DemoState';
@@ -39,7 +40,8 @@ function App() {
       {/* <DemoProps />
       <BaiTapProps1 />
       <BaiTapProps2 /> */}
-      <DemoForm />
+      {/* <DemoForm /> */}
+      <DemoRedux />
     </div>
   );
 }
